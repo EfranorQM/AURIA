@@ -17,7 +17,3 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Local data / db
-*.db
-*.sqlite
-data/
