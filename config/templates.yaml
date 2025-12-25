@@ -1,0 +1,32 @@
+defaults:
+  tiered_weapon: &TIERED_WEAPON
+    mode: TIERED
+    tier_min: 4
+    tier_max: 8
+    ench_min: 0
+    ench_max: 4
+    qualities: [1,2,3,4,5]
+
+template_groups:
+  - name: hachas
+    <<: *TIERED_WEAPON
+    categories: [equipamiento/armas/hachas]
+    template_keys:
+      - MAIN_AXE
+      - 2H_AXE
+      - 2H_HALBERD
+      - 2H_HALBERD_MORGANA
+      - 2H_SCYTHE_HELL
+      - 2H_DUALAXE_KEEPER
+      - 2H_AXE_AVALON
+      - 2H_SCYTHE_CRYSTAL
+
+  - name: espadas
+    <<: *TIERED_WEAPON
+    categories: [equipamiento/armas/espadas]
+    template_keys:
+      - MAIN_SWORD
+      - 2H_CLAYMORE
+
+# (Opcional) puedes seguir soportando el formato viejo:
+templates: []

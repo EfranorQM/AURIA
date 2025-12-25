@@ -1,0 +1,19 @@
+categories:
+  - name: Equipamiento
+    slug: equipamiento
+    children:
+      - name: Armas
+        slug: equipamiento/armas
+        children:
+          - name: Hachas
+            slug: equipamiento/armas/hachas
+          - name: Espadas
+            slug: equipamiento/armas/espadas
+      - name: Armadura
+        slug: equipamiento/armadura
+        children:
+          - name: Ropa
+            slug: equipamiento/armadura/ropa
+            children:
+              - name: Chest
+                slug: equipamiento/armadura/ropa/chest
