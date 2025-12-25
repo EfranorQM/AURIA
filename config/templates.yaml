@@ -28,6 +28,52 @@ template_groups:
     template_keys:
       - MAIN_SWORD
       - 2H_CLAYMORE
+      - 2H_DUALSWORD
+      - MAIN_SCIMITAR_MORGANA
+      - 2H_CLEAVER_HELL
+      - 2H_DUALSCIMITAR_UNDEAD
+      - 2H_CLAYMORE_AVALON
+      - MAIN_SWORD_CRYSTAL
+
+  - name: guantes_de_guerra
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/guantes-de-guerra]
+    template_keys:
+      - 2H_IRONGAUNTLETS_HELL
+      - 2H_KNUCKLES_SET1
+      - 2H_KNUCKLES_SET2
+      - 2H_KNUCKLES_SET3
+      - 2H_KNUCKLES_KEEPER
+      - 2H_KNUCKLES_HELL
+      - 2H_KNUCKLES_MORGANA
+      - 2H_KNUCKLES_AVALON
+      - 2H_KNUCKLES_CRYSTAL
+
+  - name: mazas
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/mazas]
+    template_keys:
+      - MAIN_MACE
+      - 2H_MACE
+      - 2H_FLAIL
+      - MAIN_ROCKMACE_KEEPER
+      - MAIN_MACE_HELL
+      - 2H_MACE_MORGANA
+      - 2H_DUALMACE_AVALON
+      - MAIN_MACE_CRYSTAL
+
+  - name: martillos
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/martillos]
+    template_keys:
+      - MAIN_HAMMER
+      - 2H_POLEHAMMER
+      - 2H_HAMMER
+      - 2H_HAMMER_UNDEAD
+      - 2H_DUALHAMMER_HELL
+      - 2H_RAM_KEEPER
+      - 2H_HAMMER_AVALON
+      - 2H_HAMMER_CRYSTAL
 
   # Armadura - Tela
   - name: tunicas_tela

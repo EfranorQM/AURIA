@@ -7,8 +7,19 @@ categories:
         children:
           - name: Hachas
             slug: equipamiento/armas/hachas
+
           - name: Espadas
             slug: equipamiento/armas/espadas
+
+          - name: Mazas
+            slug: equipamiento/armas/mazas
+
+          - name: Martillos
+            slug: equipamiento/armas/martillos
+
+          - name: Guantes de guerra
+            slug: equipamiento/armas/guantes-de-guerra
+
           - name: Secundarias
             slug: equipamiento/armas/secundarias
             children:
@@ -18,6 +29,7 @@ categories:
                 slug: equipamiento/armas/secundarias/guerrero
               - name: Cazador
                 slug: equipamiento/armas/secundarias/cazador
+
 
       - name: Armadura
         slug: equipamiento/armadura
