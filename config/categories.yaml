@@ -9,11 +9,53 @@ categories:
             slug: equipamiento/armas/hachas
           - name: Espadas
             slug: equipamiento/armas/espadas
+          - name: Secundarias
+            slug: equipamiento/armas/secundarias
+            children:
+              - name: Mago
+                slug: equipamiento/armas/secundarias/mago
+              - name: Guerrero
+                slug: equipamiento/armas/secundarias/guerrero
+              - name: Cazador
+                slug: equipamiento/armas/secundarias/cazador
+
       - name: Armadura
         slug: equipamiento/armadura
         children:
-          - name: Ropa
-            slug: equipamiento/armadura/ropa
+          - name: Tela
+            slug: equipamiento/armadura/tela
             children:
-              - name: Chest
-                slug: equipamiento/armadura/ropa/chest
+              - name: Tunicas
+                slug: equipamiento/armadura/tela/tunicas
+              - name: Habitos
+                slug: equipamiento/armadura/tela/habitos
+              - name: Sandalias
+                slug: equipamiento/armadura/tela/sandalias
+
+          - name: Cuero
+            slug: equipamiento/armadura/cuero
+            children:
+              - name: Chaquetas
+                slug: equipamiento/armadura/cuero/chaquetas
+              - name: Capuchas
+                slug: equipamiento/armadura/cuero/capuchas
+              - name: Zapatos
+                slug: equipamiento/armadura/cuero/zapatos
+
+          - name: Placas
+            slug: equipamiento/armadura/placas
+            children:
+              - name: Armaduras
+                slug: equipamiento/armadura/placas/armaduras
+              - name: Cascos
+                slug: equipamiento/armadura/placas/cascos
+              - name: Botas
+                slug: equipamiento/armadura/placas/botas
+
+      - name: Accesorios
+        slug: equipamiento/accesorios
+        children:
+          - name: Bolsas
+            slug: equipamiento/accesorios/bolsas
+          - name: Capas
+            slug: equipamiento/accesorios/capas

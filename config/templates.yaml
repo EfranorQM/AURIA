@@ -1,15 +1,16 @@
 defaults:
-  tiered_weapon: &TIERED_WEAPON
+  tiered_equipment: &TIERED_EQUIPMENT
     mode: TIERED
     tier_min: 4
     tier_max: 8
     ench_min: 0
     ench_max: 4
-    qualities: [1,2,3,4,5]
+    qualities: [1, 2, 3, 4, 5]
 
 template_groups:
+  # Armas principales (ya las tenías)
   - name: hachas
-    <<: *TIERED_WEAPON
+    <<: *TIERED_EQUIPMENT
     categories: [equipamiento/armas/hachas]
     template_keys:
       - MAIN_AXE
@@ -22,11 +23,199 @@ template_groups:
       - 2H_SCYTHE_CRYSTAL
 
   - name: espadas
-    <<: *TIERED_WEAPON
+    <<: *TIERED_EQUIPMENT
     categories: [equipamiento/armas/espadas]
     template_keys:
       - MAIN_SWORD
       - 2H_CLAYMORE
+
+  # Armadura - Tela
+  - name: tunicas_tela
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armadura/tela/tunicas]
+    template_keys:
+      - ARMOR_CLOTH_SET1
+      - ARMOR_CLOTH_SET2
+      - ARMOR_CLOTH_SET3
+      - ARMOR_CLOTH_KEEPER
+      - ARMOR_CLOTH_HELL
+      - ARMOR_CLOTH_MORGANA
+      - ARMOR_CLOTH_FEY
+      - ARMOR_CLOTH_AVALON
+      - ARMOR_CLOTH_ROYAL
+
+  - name: habitos_tela
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armadura/tela/habitos]
+    template_keys:
+      - HEAD_CLOTH_SET1
+      - HEAD_CLOTH_SET2
+      - HEAD_CLOTH_SET3
+      - HEAD_CLOTH_KEEPER
+      - HEAD_CLOTH_HELL
+      - HEAD_CLOTH_MORGANA
+      - HEAD_CLOTH_FEY
+      - HEAD_CLOTH_AVALON
+      - HEAD_CLOTH_ROYAL
+
+  - name: sandalias_tela
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armadura/tela/sandalias]
+    template_keys:
+      - SHOES_CLOTH_SET1
+      - SHOES_CLOTH_SET2
+      - SHOES_CLOTH_SET3
+      - SHOES_CLOTH_KEEPER
+      - SHOES_CLOTH_HELL
+      - SHOES_CLOTH_MORGANA
+      - SHOES_CLOTH_FEY
+      - SHOES_CLOTH_AVALON
+      - SHOES_CLOTH_ROYAL
+
+  # Armadura - Cuero
+  - name: chaquetas_cuero
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armadura/cuero/chaquetas]
+    template_keys:
+      - ARMOR_LEATHER_SET1
+      - ARMOR_LEATHER_SET2
+      - ARMOR_LEATHER_SET3
+      - ARMOR_LEATHER_MORGANA
+      - ARMOR_LEATHER_HELL
+      - ARMOR_LEATHER_UNDEAD
+      - ARMOR_LEATHER_FEY
+      - ARMOR_LEATHER_AVALON
+      - ARMOR_LEATHER_ROYAL
+
+  - name: zapatos_cuero
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armadura/cuero/zapatos]
+    template_keys:
+      - SHOES_LEATHER_SET1
+      - SHOES_LEATHER_SET2
+      - SHOES_LEATHER_SET3
+      - SHOES_LEATHER_MORGANA
+      - SHOES_LEATHER_HELL
+      - SHOES_LEATHER_UNDEAD
+      - SHOES_LEATHER_FEY
+      - SHOES_LEATHER_AVALON
+      - SHOES_LEATHER_ROYAL
+
+  - name: capuchas_cuero
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armadura/cuero/capuchas]
+    template_keys:
+      - HEAD_LEATHER_SET1
+      - HEAD_LEATHER_SET2
+      - HEAD_LEATHER_SET3
+      - HEAD_LEATHER_MORGANA
+      - HEAD_LEATHER_HELL
+      - HEAD_LEATHER_UNDEAD
+      - HEAD_LEATHER_FEY
+      - HEAD_LEATHER_AVALON
+      - HEAD_LEATHER_ROYAL
+
+  # Armadura - Placas
+  - name: armaduras_placas
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armadura/placas/armaduras]
+    template_keys:
+      - ARMOR_PLATE_SET1
+      - ARMOR_PLATE_SET2
+      - ARMOR_PLATE_SET3
+      - ARMOR_PLATE_UNDEAD
+      - ARMOR_PLATE_HELL
+      - ARMOR_PLATE_KEEPER
+      - ARMOR_PLATE_FEY
+      - ARMOR_PLATE_AVALON
+      - ARMOR_PLATE_ROYAL
+
+  - name: botas_placas
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armadura/placas/botas]
+    template_keys:
+      - SHOES_PLATE_SET1
+      - SHOES_PLATE_SET2
+      - SHOES_PLATE_SET3
+      - SHOES_PLATE_UNDEAD
+      - SHOES_PLATE_HELL
+      - SHOES_PLATE_KEEPER
+      - SHOES_PLATE_FEY
+      - SHOES_PLATE_AVALON
+      - SHOES_PLATE_ROYAL
+
+  - name: cascos_placas
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armadura/placas/cascos]
+    template_keys:
+      - HEAD_PLATE_SET1
+      - HEAD_PLATE_SET2
+      - HEAD_PLATE_SET3
+      - HEAD_PLATE_UNDEAD
+      - HEAD_PLATE_HELL
+      - HEAD_PLATE_KEEPER
+      - HEAD_PLATE_FEY
+      - HEAD_PLATE_AVALON
+      - HEAD_PLATE_ROYAL
+
+  # Secundarias (offhands)
+  - name: secundarias_mago
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/secundarias/mago]
+    template_keys:
+      - OFF_BOOK
+      - OFF_ORB_MORGANA
+      - OFF_DEMONSKULL_HELL
+      - OFF_TOTEM_KEEPER
+      - OFF_CENSER_AVALON
+
+  - name: secundarias_guerrero
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/secundarias/guerrero]
+    template_keys:
+      - OFF_SHIELD
+      - OFF_TOWERSHIELD_UNDEAD
+      - OFF_SHIELD_HELL
+      - OFF_SPIKEDSHIELD_MORGANA
+      - OFF_SHIELD_AVALON
+
+  - name: secundarias_cazador
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/secundarias/cazador]
+    template_keys:
+      - OFF_TORCH
+      - OFF_HORN_KEEPER
+      - OFF_TALISMAN_AVALON
+      - OFF_LAMP_UNDEAD
+      - OFF_JESTERCANE_HELL
+
+  # Accesorios
+  - name: bolsas
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/accesorios/bolsas]
+    template_keys:
+      - BAG
+      - BAG_INSIGHT
+
+  - name: capas
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/accesorios/capas]
+    template_keys:
+      - CAPE
+      - CAPEITEM_FW_BRIDGEWATCH
+      - CAPEITEM_FW_FORTSTERLING
+      - CAPEITEM_FW_LYMHURST
+      - CAPEITEM_FW_MARTLOCK
+      - CAPEITEM_FW_THETFORD
+      - CAPEITEM_FW_CAERLEON
+      - CAPEITEM_FW_BRECILIEN
+      - CAPEITEM_AVALON
+      - CAPEITEM_SMUGGLER
+      - CAPEITEM_HERETIC
+      - CAPEITEM_UNDEAD
+      - CAPEITEM_KEEPER
+      - CAPEITEM_MORGANA
+      - CAPEITEM_DEMON
 
 # (Opcional) puedes seguir soportando el formato viejo:
 templates: []
