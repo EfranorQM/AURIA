@@ -49,6 +49,19 @@ template_groups:
       - 2H_KNUCKLES_AVALON
       - 2H_KNUCKLES_CRYSTAL
 
+  - name: ballestas
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/ballestas]
+    template_keys:
+      - 2H_CROSSBOW
+      - 2H_CROSSBOWLARGE
+      - MAIN_1HCROSSBOW
+      - 2H_REPEATINGCROSSBOW_UNDEAD
+      - 2H_DUALCROSSBOW_HELL
+      - 2H_CROSSBOWLARGE_MORGANA
+      - 2H_CROSSBOW_CANNON_AVALON
+      - 2H_DUALCROSSBOW_CRYSTAL
+
   - name: mazas
     <<: *TIERED_EQUIPMENT
     categories: [equipamiento/armas/mazas]

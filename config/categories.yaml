@@ -20,6 +20,9 @@ categories:
           - name: Guantes de guerra
             slug: equipamiento/armas/guantes-de-guerra
 
+          - name: Ballestas
+            slug: equipamiento/armas/ballestas
+
           - name: Secundarias
             slug: equipamiento/armas/secundarias
             children:
