@@ -420,5 +420,5 @@ template_groups:
       - CAPEITEM_MORGANA
       - CAPEITEM_DEMON
 
-# (Opcional) puedes seguir soportando el formato viejo:
+# (Opcional) el formato viejo:
 templates: []

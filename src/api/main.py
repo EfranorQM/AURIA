@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from src.api.routers.categories import router as categories_router
 from src.api.routers.black_market import router as black_market_router
+from src.api.routers.black_market_catalog import router as black_market_catalog_router
 
 app = FastAPI(title="AURIA API", version="0.1.0")
 
@@ -20,3 +21,4 @@ app.add_middleware(
 
 app.include_router(categories_router)
 app.include_router(black_market_router)
+app.include_router(black_market_catalog_router)

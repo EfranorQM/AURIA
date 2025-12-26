@@ -63,18 +63,12 @@ class BMFlippingAnalyzer:
         top_n: Optional[int] = None,
     ) -> List[FlipResult]:
         index = self.q.fetch_index()
-        results = self._compute(index)
-
-        # Filtra usando el neto principal (8%) para ser conservador
-        results = [
-            r for r in results
-            if r.profit_net >= min_profit_net and r.margin_net >= min_margin_net
-        ]
-
-        # Ranking: robustos arriba, luego profit_net, luego margin_net
-        results.sort(key=lambda x: (x.is_robust, x.profit_net, x.margin_net), reverse=True)
-
-        return results[:top_n] if top_n is not None else results
+        return self.analyze_index(
+            index,
+            min_profit_net=min_profit_net,
+            min_margin_net=min_margin_net,
+            top_n=top_n,
+        )
 
     # ---------------- Internal ----------------
 
@@ -235,3 +229,28 @@ class BMFlippingAnalyzer:
         if best_q is None:
             return None
         return best_q, (best_rev, best_src)
+
+    def analyze_index(
+            self,
+            index: MarketIndex,
+            *,
+            min_profit_net: int = 1,
+            min_margin_net: float = 0.0,
+            top_n: Optional[int] = None,
+        ) -> List[FlipResult]:
+            """
+            Igual que run(), pero reutiliza un MarketIndex ya descargado.
+            Ideal para análisis masivo por categoría/catálogo.
+            """
+            results = self._compute(index)
+
+            # Filtra usando el neto principal (8%) para ser conservador
+            results = [
+                r for r in results
+                if r.profit_net >= min_profit_net and r.margin_net >= min_margin_net
+            ]
+
+            # Ranking: robustos arriba, luego profit_net, luego margin_net
+            results.sort(key=lambda x: (x.is_robust, x.profit_net, x.margin_net), reverse=True)
+
+            return results[:top_n] if top_n is not None else results
