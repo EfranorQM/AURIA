@@ -119,13 +119,18 @@ class BMFlippingAnalyzer:
                         continue
 
                     # is_robust: si hay sell_max y con sell_max también hay profit
-                    robust_profit = (revenue - robust_cost) if robust_cost > 0 else -1
+                    robust_profit = -1
+                    if robust_cost > 0:
+                        net_rev_robust = int(round(revenue * (1.0 - TAX_FLIP)))
+                        robust_profit = net_rev_robust - robust_cost
+
                     is_robust = (robust_src == "sell_max") and (robust_profit > 0)
 
+
                     # Netos (tu modelo: “aplicar impuesto al profit”)
-                    profit_net, margin_net = self._apply_tax(gross_profit, cost, TAX_NET)
-                    profit_flip, margin_flip = self._apply_tax(gross_profit, cost, TAX_FLIP)
-                    profit_order, margin_order = self._apply_tax(gross_profit, cost, TAX_ORDER)
+                    profit_net, margin_net = self._apply_tax_on_revenue(revenue, cost, TAX_NET)
+                    profit_flip, margin_flip = self._apply_tax_on_revenue(revenue, cost, TAX_FLIP)
+                    profit_order, margin_order = self._apply_tax_on_revenue(revenue, cost, TAX_ORDER)
 
                     out.append(FlipResult(
                         item_id=item_id,
@@ -154,15 +159,19 @@ class BMFlippingAnalyzer:
     # ---------- tax helper ----------
 
     @staticmethod
-    def _apply_tax(gross_profit: int, cost: int, tax_rate: float) -> Tuple[int, float]:
+    def _apply_tax_on_revenue(revenue: int, cost: int, tax_rate: float) -> Tuple[int, float]:
         """
-        Modelo pedido: impuesto aplicado al PROFIT.
-        profit_net = profit * (1 - tax)
-        margin_net = profit_net / cost
+        Impuesto aplicado al REVENUE (precio de venta), que es como funciona BM/mercados.
+        net_revenue = revenue * (1 - tax)
+        profit = net_revenue - cost
+        margin = profit / cost
         """
-        net = int(gross_profit * (1.0 - tax_rate))
-        margin = (net / cost) if cost > 0 else 0.0
-        return net, margin
+        net_revenue = int(round(revenue * (1.0 - tax_rate)))
+        profit = net_revenue - cost
+        margin = (profit / cost) if cost > 0 else 0.0
+        return profit, margin
+
+
 
     # ---------- price selectors ----------
 
