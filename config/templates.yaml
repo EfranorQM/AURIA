@@ -8,7 +8,7 @@ defaults:
     qualities: [1, 2, 3, 4, 5]
 
 template_groups:
-  # Armas principales (ya las tenías)
+  # Armas
   - name: hachas
     <<: *TIERED_EQUIPMENT
     categories: [equipamiento/armas/hachas]
@@ -34,6 +34,32 @@ template_groups:
       - 2H_DUALSCIMITAR_UNDEAD
       - 2H_CLAYMORE_AVALON
       - MAIN_SWORD_CRYSTAL
+
+  - name: mazas
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/mazas]
+    template_keys:
+      - MAIN_MACE
+      - 2H_MACE
+      - 2H_FLAIL
+      - MAIN_ROCKMACE_KEEPER
+      - MAIN_MACE_HELL
+      - 2H_MACE_MORGANA
+      - 2H_DUALMACE_AVALON
+      - MAIN_MACE_CRYSTAL
+
+  - name: martillos
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/martillos]
+    template_keys:
+      - MAIN_HAMMER
+      - 2H_POLEHAMMER
+      - 2H_HAMMER
+      - 2H_HAMMER_UNDEAD
+      - 2H_DUALHAMMER_HELL
+      - 2H_RAM_KEEPER
+      - 2H_HAMMER_AVALON
+      - 2H_HAMMER_CRYSTAL
 
   - name: guantes_de_guerra
     <<: *TIERED_EQUIPMENT
@@ -62,31 +88,149 @@ template_groups:
       - 2H_CROSSBOW_CANNON_AVALON
       - 2H_DUALCROSSBOW_CRYSTAL
 
-  - name: mazas
+  - name: arcos
     <<: *TIERED_EQUIPMENT
-    categories: [equipamiento/armas/mazas]
+    categories: [equipamiento/armas/arcos]
     template_keys:
-      - MAIN_MACE
-      - 2H_MACE
-      - 2H_FLAIL
-      - MAIN_ROCKMACE_KEEPER
-      - MAIN_MACE_HELL
-      - 2H_MACE_MORGANA
-      - 2H_DUALMACE_AVALON
-      - MAIN_MACE_CRYSTAL
+      - 2H_BOW
+      - 2H_WARBOW
+      - 2H_LONGBOW
+      - 2H_LONGBOW_UNDEAD
+      - 2H_BOW_HELL
+      - 2H_BOW_KEEPER
+      - 2H_BOW_AVALON
+      - 2H_BOW_CRYSTAL
 
-  - name: martillos
+  - name: dagas
     <<: *TIERED_EQUIPMENT
-    categories: [equipamiento/armas/martillos]
+    categories: [equipamiento/armas/dagas]
     template_keys:
-      - MAIN_HAMMER
-      - 2H_POLEHAMMER
-      - 2H_HAMMER
-      - 2H_HAMMER_UNDEAD
-      - 2H_DUALHAMMER_HELL
-      - 2H_RAM_KEEPER
-      - 2H_HAMMER_AVALON
-      - 2H_HAMMER_CRYSTAL
+      - MAIN_DAGGER
+      - 2H_DAGGERPAIR
+      - 2H_CLAWPAIR
+      - MAIN_RAPIER_MORGANA
+      - MAIN_DAGGER_HELL
+      - DUALSICKLE_UNDEAD
+      - DAGGER_KATAR_AVALON
+      - DAGGERPAIR_CRYSTAL
+
+  - name: lanzas
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/lanzas]
+    template_keys:
+      - MAIN_SPEAR
+      - 2H_SPEAR
+      - 2H_GLAIVE
+      - MAIN_SPEAR_KEEPER
+      - 2H_HARPOON_HELL
+      - 2H_TRIDENT_UNDEAD
+      - MAIN_SPEAR_LANCE_AVALON
+      - 2H_GLAIVE_CRYSTAL
+
+  - name: varas
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/varas]
+    template_keys:
+      - 2H_QUARTERSTAFF
+      - 2H_IRONCLADEDSTAFF
+      - 2H_DOUBLEBLADEDSTAFF
+      - 2H_COMBATSTAFF_MORGANA
+      - 2H_TWINSCYTHE_HELL
+      - 2H_ROCKSTAFF_KEEPER
+      - QUARTERSTAFF_AVALON
+      - 2H_DOUBLEBLADEDSTAFF_CRYSTAL
+
+  - name: cambiaformas
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/cambiaformas]
+    template_keys:
+      - 2H_SHAPESHIFTER_SET1
+      - 2H_SHAPESHIFTER_SET2
+      - 2H_SHAPESHIFTER_SET3
+      - 2H_SHAPESHIFTER_MORGANA
+      - 2H_SHAPESHIFTER_HELL
+      - 2H_SHAPESHIFTER_KEEPER
+      - 2H_SHAPESHIFTER_AVALON
+      - 2H_SHAPESHIFTER_CRYSTAL
+
+  # Bastones
+  - name: bastones_naturales
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/bastones/naturales]
+    template_keys:
+      - MAIN_NATURESTAFF
+      - 2H_NATURESTAFF
+      - 2H_WILDSTAFF
+      - MAIN_NATURESTAFF_KEEPER
+      - 2H_NATURESTAFF_HELL
+      - 2H_NATURESTAFF_KEEPER  # duplicado según la lista que enviaste
+      - MAIN_NATURESTAFF_AVALON
+      - MAIN_NATURESTAFF_CRYSTAL
+
+  - name: bastones_fuego
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/bastones/fuego]
+    template_keys:
+      - MAIN_FIRESTAFF
+      - 2H_FIRESTAFF
+      - 2H_INFERNOSTAFF
+      - MAIN_FIRESTAFF_KEEPER
+      - 2H_FIRESTAFF_HELL
+      - 2H_INFERNOSTAFF_MORGANA
+      - 2H_FIRE_RINGPAIR_AVALON
+      - MAIN_FIRESTAFF_CRYSTAL
+
+  - name: bastones_sagrados
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/bastones/sagrados]
+    template_keys:
+      - MAIN_HOLYSTAFF
+      - 2H_HOLYSTAFF
+      - 2H_DIVINESTAFF
+      - MAIN_HOLYSTAFF_MORGANA
+      - 2H_HOLYSTAFF_HELL
+      - 2H_HOLYSTAFF_UNDEAD
+      - MAIN_HOLYSTAFF_AVALON
+      - 2H_HOLYSTAFF_CRYSTAL
+
+  - name: bastones_arcanos
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/bastones/arcanos]
+    template_keys:
+      - MAIN_ARCANESTAFF
+      - 2H_ARCANESTAFF
+      - 2H_ENIGMATICSTAFF
+      - MAIN_ARCANESTAFF_UNDEAD
+      - 2H_ARCANESTAFF_HELL
+      - 2H_ENIGMATICORB_MORGANA
+      - 2H_ARCANE_RINGPAIR_AVALON
+      - 2H_ARCANESTAFF_CRYSTAL
+
+  - name: bastones_hielo
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/bastones/hielo]
+    template_keys:
+      - MAIN_FROSTSTAFF
+      - 2H_FROSTSTAFF
+      - 2H_GLACIALSTAFF
+      - MAIN_FROSTSTAFF_KEEPER
+      - 2H_ICEGAUNTLETS_HELL
+      - 2H_ICECRYSTAL_UNDEAD
+      - MAIN_FROSTSTAFF_AVALON
+      - 2H_FROSTSTAFF_CRYSTAL
+
+  - name: bastones_malditos
+    <<: *TIERED_EQUIPMENT
+    categories: [equipamiento/armas/bastones/malditos]
+    template_keys:
+      - MAIN_CURSEDSTAFF
+      - 2H_CURSEDSTAFF
+      - 2H_DEMONICSTAFF
+      - MAIN_CURSEDSTAFF_UNDEAD
+      - 2H_SKULLORB_HELL
+      - 2H_CURSEDSTAFF_MORGANA
+      - MAIN_CURSEDSTAFF_AVALON
+      - MAIN_CURSEDSTAFF_CRYSTAL
 
   # Armadura - Tela
   - name: tunicas_tela

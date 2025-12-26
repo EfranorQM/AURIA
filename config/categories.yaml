@@ -23,6 +23,37 @@ categories:
           - name: Ballestas
             slug: equipamiento/armas/ballestas
 
+          - name: Arcos
+            slug: equipamiento/armas/arcos
+
+          - name: Dagas
+            slug: equipamiento/armas/dagas
+
+          - name: Lanzas
+            slug: equipamiento/armas/lanzas
+
+          - name: Varas
+            slug: equipamiento/armas/varas
+
+          - name: Cambiaformas
+            slug: equipamiento/armas/cambiaformas
+
+          - name: Bastones
+            slug: equipamiento/armas/bastones
+            children:
+              - name: Naturales
+                slug: equipamiento/armas/bastones/naturales
+              - name: Fuego
+                slug: equipamiento/armas/bastones/fuego
+              - name: Sagrados
+                slug: equipamiento/armas/bastones/sagrados
+              - name: Arcanos
+                slug: equipamiento/armas/bastones/arcanos
+              - name: Hielo
+                slug: equipamiento/armas/bastones/hielo
+              - name: Malditos
+                slug: equipamiento/armas/bastones/malditos
+
           - name: Secundarias
             slug: equipamiento/armas/secundarias
             children:
@@ -32,7 +63,6 @@ categories:
                 slug: equipamiento/armas/secundarias/guerrero
               - name: Cazador
                 slug: equipamiento/armas/secundarias/cazador
-
 
       - name: Armadura
         slug: equipamiento/armadura
